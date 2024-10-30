@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /identity
+
+spring:
+  datasource:
+    url: ${DBMS_CONNECTION}
+    username: ${DBMS_USERNAME}
+    password: ${DBMS_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  singerKey: "rraxXtzs+kLoJ0OA7bXsjS6plwLxx3yAndpEITNyx2n8JJNuiaU2K+wnNG2BoZmp"
+  valid-duration : 3600 #in second
+  refreshable-duration: 360000
